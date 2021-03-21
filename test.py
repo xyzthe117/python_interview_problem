@@ -95,54 +95,88 @@ def atoi(str):
 #       print ("") # print next row 
         
 #Easy 3.4
-def ex34():
-  while(1):
+# def ex34():
+#   while(1):
+#     val = input("Enter your value(Press Enter to Exit): ") 
+#     if(val==''):
+#       exit()
+#     n=atoi(val)
+#     i,j=0,n-1
+#     while j >= 0 and i < n:
+#       initial_spaces = ' '*min(i,j)
+#       middle_spaces = ' '*(abs(i - j) - 1)
+#       final_spaces = ' '*(n - 1 - max(i,j))
+#       if j == i:
+#           print (initial_spaces + '*' + final_spaces)
+#       else:
+#           print (initial_spaces + '*' + middle_spaces + '*' + final_spaces)
+#       i += 1
+#       j -= 1
+#     return 1111
+  
+  
+#Not Easy 3.5
+# while(1):
+#     num = int(input("Enter the Number: "))
+
+#     for i in range(0, num):
+#         for j in range(0, num-i-1):
+#             print(" ",end="")
+#         for j in range(0, i*2+1):
+#             print("*", end="")
+#         print()
+
+#     for i in range(1, num):
+#         for j in range(0, i):
+#             print(" ",end="")
+#         for j in range(0, (num-i)*2-1):
+#             print("*", end="")
+#         print()
+
+
+# Medium
+while(1):
     val = input("Enter your value(Press Enter to Exit): ") 
     if(val==''):
       exit()
     n=atoi(val)
-    i,j=0,n-1
-    while j >= 0 and i < n:
-      initial_spaces = ' '*min(i,j)
-      middle_spaces = ' '*(abs(i - j) - 1)
-      final_spaces = ' '*(n - 1 - max(i,j))
-      if j == i:
-          print (initial_spaces + '*' + final_spaces)
-      else:
-          print (initial_spaces + '*' + middle_spaces + '*' + final_spaces)
-      i += 1
-      j -= 1
-    return 1111
-  
-  
+    print(n,"->",end=" ")
+    for num in range(0, n + 1):
+        # all prime numbers are greater than 1
+        if num > 1:
+            for i in range(2, num):
+                if (num % i) == 0:
+                    break
+            else:
+                print(num,end=" ")
+    print()
+
+# def main():
+#   choice ='0'
+#   while choice =='0':
+#     print("Main Choice: Choose 1 of 5 choices")
+#     print("Choose 1 for something")
+#     print("Choose 2 for something")
+#     print("Choose 3 for something")
+#     print("Choose 4 for something")
+#     print("Choose 5 to go to another menu")
+
+#     choice = input ("Please make a choice: ")
+
+#     if choice == "5":
+#         print("Go to another menu")
+#         second_menu()
+#     elif choice == "4":
+#         print("Do Something 4")
+#     elif choice == "3":
+#         print("Do Something 3")
+#     elif choice == "2":
+#         print("Do Something 2")
+#     elif choice == "1":
+#         test=ex34()
+#     else:
+#         print("I don't understand your choice.")
+#     print(test)
 
 
-def main():
-  choice ='0'
-  while choice =='0':
-    print("Main Choice: Choose 1 of 5 choices")
-    print("Choose 1 for something")
-    print("Choose 2 for something")
-    print("Choose 3 for something")
-    print("Choose 4 for something")
-    print("Choose 5 to go to another menu")
-
-    choice = input ("Please make a choice: ")
-
-    if choice == "5":
-        print("Go to another menu")
-        second_menu()
-    elif choice == "4":
-        print("Do Something 4")
-    elif choice == "3":
-        print("Do Something 3")
-    elif choice == "2":
-        print("Do Something 2")
-    elif choice == "1":
-        test=ex34()
-    else:
-        print("I don't understand your choice.")
-    print(test)
-
-
-main()
+# main()
