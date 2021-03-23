@@ -96,60 +96,54 @@ def atoi(str):
         
 #Easy 3.4
 # def ex34():
-#   while(1):
+# while(1):
+#     val = input("Enter your value(Press Enter to Exit): ") 
+#     if(val==''):
+#         exit()
+#     n=atoi(val)
+#     i,j=0,n-1
+#     while j >= 0 and i < n:
+#         initial_spaces = ' '*min(i,j)
+#         middle_spaces = ' '*(abs(i - j) - 1)
+#         final_spaces = ' '*(n - 1 - max(i,j))
+#         if j == i:
+#             print (initial_spaces + '*' + final_spaces)
+#         else:
+#             print (initial_spaces + '*' + middle_spaces + '*' + final_spaces)
+#         i += 1
+#         j -= 1
+    
+  
+  
+#Not Easy 3.5
+while(1):
+    n = int(input("Enter the Number: "))
+    for i in range(n+1) :
+        if i%2!=0 :
+            val = (n - i) // 2
+            print(" "*val + "*"*(i) + " "*val)
+    for j in range(n-1, 0, -1) :
+        if j%2!=0 :
+            val = (n-j)//2
+            print(" "*val + "*"*(j) + " "*val)
+
+
+# Medium
+# while(1):
 #     val = input("Enter your value(Press Enter to Exit): ") 
 #     if(val==''):
 #       exit()
 #     n=atoi(val)
-#     i,j=0,n-1
-#     while j >= 0 and i < n:
-#       initial_spaces = ' '*min(i,j)
-#       middle_spaces = ' '*(abs(i - j) - 1)
-#       final_spaces = ' '*(n - 1 - max(i,j))
-#       if j == i:
-#           print (initial_spaces + '*' + final_spaces)
-#       else:
-#           print (initial_spaces + '*' + middle_spaces + '*' + final_spaces)
-#       i += 1
-#       j -= 1
-#     return 1111
-  
-  
-#Not Easy 3.5
-# while(1):
-#     num = int(input("Enter the Number: "))
-
-#     for i in range(0, num):
-#         for j in range(0, num-i-1):
-#             print(" ",end="")
-#         for j in range(0, i*2+1):
-#             print("*", end="")
-#         print()
-
-#     for i in range(1, num):
-#         for j in range(0, i):
-#             print(" ",end="")
-#         for j in range(0, (num-i)*2-1):
-#             print("*", end="")
-#         print()
-
-
-# Medium
-while(1):
-    val = input("Enter your value(Press Enter to Exit): ") 
-    if(val==''):
-      exit()
-    n=atoi(val)
-    print(n,"->",end=" ")
-    for num in range(0, n + 1):
-        # all prime numbers are greater than 1
-        if num > 1:
-            for i in range(2, num):
-                if (num % i) == 0:
-                    break
-            else:
-                print(num,end=" ")
-    print()
+#     print(n,"->",end=" ")
+#     for num in range(0, n + 1):
+#         # all prime numbers are greater than 1
+#         if num > 1:
+#             for i in range(2, num):
+#                 if (num % i) == 0:
+#                     break
+#             else:
+#                 print(num,end=" ")
+#     print()
 
 # def main():
 #   choice ='0'

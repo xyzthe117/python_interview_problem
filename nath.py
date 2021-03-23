@@ -157,6 +157,8 @@ def hollowPyramid():
         else:
             print("Invalid, Please input only Y or N\n")
 
+
+
 # Easy Question - 3.4
 #   Cross Star Pattern
 #       Rows  - run an outer loop from 1 to n.
